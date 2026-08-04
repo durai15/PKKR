@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 
-const VIDEOS = [
+const VIDEOS_ROW1 = [
   {
     src: "/videos/dairy-plant-overview.mp4",
     title: "Dairy Plant Overview",
@@ -20,6 +20,21 @@ const VIDEOS = [
     title: "Equipment Installation",
     description: "Time-lapse of dairy equipment installation, pipework, and commissioning process.",
     thumbnail: "/images/milk-chilling-tank.jpg",
+  },
+];
+
+const VIDEOS_ROW2 = [
+  {
+    src: "/videos/milk-backing.mp4",
+    title: "Milk Backing Process",
+    description: "Detailed view of the milk backing process at our dairy plant facility.",
+    thumbnail: "/images/milk-agitator-vat.jpg",
+  },
+  {
+    src: "/videos/1kl-plant-erection-finished.mp4",
+    title: "1 KL Plant Erection – Completed",
+    description: "Full erection and finishing work of a 1,000-litre dairy plant installation.",
+    thumbnail: "/images/milk-process-plant-02.jpg",
   },
 ];
 
@@ -137,8 +152,16 @@ export default function VideoGallery() {
           </p>
         </div>
 
+        {/* Row 1 – original three videos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {VIDEOS.map((video) => (
+          {VIDEOS_ROW1.map((video) => (
+            <VideoCard key={video.src} video={video} />
+          ))}
+        </div>
+
+        {/* Row 2 – two new videos, centred on wider screens */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7 lg:w-2/3 lg:mx-auto">
+          {VIDEOS_ROW2.map((video) => (
             <VideoCard key={video.src} video={video} />
           ))}
         </div>
