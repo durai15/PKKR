@@ -25,23 +25,25 @@ export default function Header() {
       }`}
     >
       <div className="max-w-[1180px] mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-[72px]">
-          {/* Brand */}
-          <Link href="#hero" onClick={closeMenu} className="flex items-center gap-3 flex-shrink-0">
-            <div>
-              <div
-                className="font-black text-2xl leading-none"
-                style={{ fontFamily: "Georgia, serif", color: "var(--maroon)" }}
-              >
-                PKKR<span style={{ color: "var(--gold)" }}>.</span>
-              </div>
-              <div
-                className="text-[10px] uppercase tracking-widest leading-tight mt-0.5"
-                style={{ color: "var(--ink-soft)" }}
-              >
-                Engineering & PKR Traders
-              </div>
-            </div>
+        <div className="flex items-center justify-between h-[76px] lg:h-[84px]">
+          {/* Brand Logo - All Screen Sizes */}
+          <Link 
+            href="#hero" 
+            onClick={closeMenu} 
+            className="flex items-center flex-shrink-0 relative"
+            aria-label="PKKR Engineering & PKR Traders - Dairy Equipment Specialists, Pudukkottai"
+          >
+            {/* Logo Image - Responsive across all devices */}
+            <img
+              src="/logo-horizontal.svg"
+              alt="PKKR Engineering & PKR Traders - Dairy Equipment, Plant Erection & Machinery, Pudukkottai, Tamil Nadu"
+              className="h-14 sm:h-16 lg:h-[72px] w-auto"
+              style={{ borderRadius: '6px' }}
+              width="320"
+              height="72"
+              loading="eager"
+              fetchPriority="high"
+            />
           </Link>
 
           {/* Desktop Nav */}

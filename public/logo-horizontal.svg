@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280" role="img" aria-label="PKKR Engineering and PKR Traders - Dairy Equipment Specialists, Pudukkottai Tamil Nadu">
+  <title>PKKR Engineering &amp; PKR Traders</title>
+  <desc>PKKR Engineering and PKR Traders - Dairy Equipment Specialists, Pudukkottai, Tamil Nadu since 2005</desc>
+
+  <defs>
+    <!-- Enhanced gold gradient for maximum visibility -->
+    <linearGradient id="goldMain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fef4c0"/>
+      <stop offset="20%"  stop-color="#e8d060"/>
+      <stop offset="45%"  stop-color="#c9941e"/>
+      <stop offset="55%"  stop-color="#a87010"/>
+      <stop offset="75%"  stop-color="#d4a830"/>
+      <stop offset="92%"  stop-color="#f0d464"/>
+      <stop offset="100%" stop-color="#9a7020"/>
+    </linearGradient>
+
+    <!-- Bright gold for taglines (higher contrast) -->
+    <linearGradient id="goldBright" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#f5e6a8"/>
+      <stop offset="50%"  stop-color="#d4a830"/>
+      <stop offset="100%" stop-color="#b88820"/>
+    </linearGradient>
+
+    <!-- Subtle glow behind PKKR -->
+    <filter id="textGlow" x="-20%" y="-25%" width="140%" height="150%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1.2 0.8 0 0 0.15
+                0.8 0.6 0 0 0.05
+                0 0 0 0 0
+                0 0 0 0.4 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Top gold border -->
+  <rect x="0" y="0" width="800" height="8" fill="#c9a24b"/>
+
+  <!-- Maroon background -->
+  <rect x="0" y="8" width="800" height="264" fill="#7c1220"/>
+
+  <!-- Bottom gold border -->
+  <rect x="0" y="272" width="800" height="8" fill="#c9a24b"/>
+
+  <!-- TOP TAGLINE: PUDUKKOTTAI · TAMIL NADU (larger, bolder) -->
+  <text
+    x="400" y="60"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="22"
+    font-weight="800"
+    fill="url(#goldBright)"
+    letter-spacing="7"
+    opacity="0.95">
+    · PUDUKKOTTAI · TAMIL NADU ·
+  </text>
+
+  <!-- PKKR — hero text -->
+  <text
+    x="400" y="175"
+    text-anchor="middle"
+    dominant-baseline="auto"
+    font-family="Georgia, 'Times New Roman', Times, serif"
+    font-size="140"
+    font-weight="900"
+    fill="url(#goldMain)"
+    filter="url(#textGlow)"
+    letter-spacing="14">
+    PKKR
+  </text>
+
+  <!-- Divider line -->
+  <line x1="60" y1="195" x2="740" y2="195"
+    stroke="#c9a24b" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- BOTTOM TAGLINE: ENGINEERING & PKR TRADERS (larger, bolder) -->
+  <text
+    x="400" y="238"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="800"
+    fill="url(#goldBright)"
+    letter-spacing="9"
+    opacity="0.95">
+    ENGINEERING &amp; PKR TRADERS
+  </text>
+</svg>
