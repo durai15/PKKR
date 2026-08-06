@@ -143,11 +143,9 @@ export const metadata: Metadata = {
     },
   },
 
-  // ── Verification placeholders (fill in once you own the domain) ───────────
-  // verification: {
-  //   google: "YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN",
-  //   yandex: "YOUR_YANDEX_TOKEN",
-  // },
+  verification: {
+    google: "ElMwFmC48jTFNmeJgl5u-PJeRiBTHP5KvdSqTnMIEBU",
+  },
 };
 
 export const viewport: Viewport = {
