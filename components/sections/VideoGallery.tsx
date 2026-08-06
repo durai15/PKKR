@@ -21,12 +21,12 @@ const ALL_VIDEOS = [
     description: "Time-lapse of dairy equipment installation, pipework, and commissioning process.",
     thumbnail: "/images/milk-chilling-tank.jpg",
   },
-  {
-    src: "/videos/full-processing-of-milk.mp4",
-    title: "Full Processing of Milk",
-    description: "End-to-end demonstration of the complete milk processing workflow inside a modern dairy plant.",
-    thumbnail: "/images/milk-process-plant-02.jpg",
-  },
+  // {
+  //   src: "/videos/full-processing-of-milk.mp4",
+  //   title: "Full Processing of Milk",
+  //   description: "End-to-end demonstration of the complete milk processing workflow inside a modern dairy plant.",
+  //   thumbnail: "/images/milk-process-plant-02.jpg",
+  // },
   {
     src: "/videos/milk-backing.mp4",
     title: "Milk Backing Process",

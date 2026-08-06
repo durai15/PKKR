@@ -25,22 +25,26 @@ export default function Header() {
       }`}
     >
       <div className="max-w-[1180px] mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[76px] lg:h-[84px]">
+        <div className="flex items-center justify-between h-[80px] lg:h-[92px]">
           {/* Brand Logo - All Screen Sizes */}
           <Link 
-            href="#hero" 
-            onClick={closeMenu} 
+            href="/" 
+            onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} 
             className="flex items-center flex-shrink-0 relative"
             aria-label="PKKR Engineering & PKR Traders - Dairy Equipment Specialists, Pudukkottai"
           >
-            {/* Logo Image - Responsive across all devices */}
+            {/* Logo Image - PNG format, optimized for all screens */}
             <img
-              src="/logo-horizontal.svg"
+              src="/pkkr-logo.png"
               alt="PKKR Engineering & PKR Traders - Dairy Equipment, Plant Erection & Machinery, Pudukkottai, Tamil Nadu"
-              className="h-14 sm:h-16 lg:h-[72px] w-auto"
-              style={{ borderRadius: '6px' }}
-              width="320"
-              height="72"
+              className="h-14 sm:h-16 md:h-[68px] lg:h-[76px] w-auto object-contain"
+              style={{
+                borderRadius: '6px',
+                maxWidth: '320px',
+                filter: 'brightness(1.12) contrast(1.05)',
+              }}
+              width="677"
+              height="369"
               loading="eager"
               fetchPriority="high"
             />
@@ -49,14 +53,26 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="relative text-sm font-semibold text-[var(--ink)] group py-1"
-              >
-                {link.label}
-                <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[var(--gold)] transition-all duration-300 group-hover:w-full" />
-              </a>
+              link.href === "/" ? (
+                <Link
+                  key={link.href}
+                  href="/"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="relative text-sm font-semibold text-[var(--ink)] group py-1"
+                >
+                  {link.label}
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[var(--gold)] transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="relative text-sm font-semibold text-[var(--ink)] group py-1"
+                >
+                  {link.label}
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-[var(--gold)] transition-all duration-300 group-hover:w-full" />
+                </a>
+              )
             ))}
           </nav>
 
@@ -119,14 +135,25 @@ export default function Header() {
         <div className="bg-white border-t border-[rgba(34,27,24,0.1)] px-6 pb-6 pt-4">
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={closeMenu}
-                className="text-base font-semibold text-[var(--ink)] py-3 border-b border-[rgba(34,27,24,0.08)] hover:text-[var(--maroon)] transition-colors"
-              >
-                {link.label}
-              </a>
+              link.href === "/" ? (
+                <Link
+                  key={link.href}
+                  href="/"
+                  onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  className="text-base font-semibold text-[var(--ink)] py-3 border-b border-[rgba(34,27,24,0.08)] hover:text-[var(--maroon)] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="text-base font-semibold text-[var(--ink)] py-3 border-b border-[rgba(34,27,24,0.08)] hover:text-[var(--maroon)] transition-colors"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </nav>
           <div className="flex flex-col gap-3 mt-5">

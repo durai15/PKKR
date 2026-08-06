@@ -133,9 +133,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6 text-xs text-[#6b5f59]">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 text-xs text-[#6b5f59]">
           <p>© {year} {COMPANY.fullName}. All rights reserved.</p>
-          <p>Dairy Equipment · Erection Work · Lab Materials · SMP Culture · Machinery Trading</p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link href="/privacy" className="hover:text-[var(--gold)] transition-colors">
+              Privacy Policy
+            </Link>
+            <span>·</span>
+            <Link href="/terms" className="hover:text-[var(--gold)] transition-colors">
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

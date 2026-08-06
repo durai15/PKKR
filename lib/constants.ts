@@ -19,7 +19,7 @@ export const COMPANY = {
 
 // Navigation Links
 export const NAV_LINKS = [
-  { label: "Home", href: "#hero" },
+  { label: "Home", href: "/" },
   { label: "About", href: "#about" },
   { label: "Products", href: "#products" },
   { label: "Gallery", href: "#gallery" },
