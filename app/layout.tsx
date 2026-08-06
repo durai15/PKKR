@@ -13,51 +13,109 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const BASE_URL = "https://pkkrengineering.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pkkrengineering.com"),
-  title: "PKKR Engineering & PKR Traders — Dairy Equipment, Machinery & Plant Erection | Pudukkottai",
+  metadataBase: new URL(BASE_URL),
+
+  // ── Title ──────────────────────────────────────────────────────────────────
+  // "PKKR Engineering" and "PKR Traders" appear up front so partial URL-bar
+  // searches like "pkkr engineering" or "pkkrengineering" match immediately.
+  title: {
+    default:
+      "PKKR Engineering & PKR Traders | Dairy Equipment, Plant Erection & Machinery – Pudukkottai, Tamil Nadu",
+    template: "%s | PKKR Engineering",
+  },
+
+  // ── Description ────────────────────────────────────────────────────────────
   description:
-    "PKKR Engineering & PKR Traders, Pudukkottai — Complete dairy equipment supply, dairy plant erection, milk processing machinery, ghee boilers, milk storage tanks, lab materials, SMP powder & culture, and new & used dairy machinery. Your one-stop partner for everything your dairy plant needs.",
+    "PKKR Engineering & PKR Traders – Pudukkottai's trusted source for complete dairy equipment supply, dairy plant erection, milk processing machinery, ghee boilers, milk storage tanks, lab materials, SMP powder & culture, and new & used dairy machinery across Tamil Nadu and South India.",
+
+  // ── Keywords (long-tail + branded) ────────────────────────────────────────
   keywords: [
+    // Branded – catches "pkkr engineering", "pkkrengineering", "pkkr engineering pudukkottai" etc.
+    "PKKR Engineering",
+    "pkkrengineering",
+    "pkkr engineering pudukkottai",
+    "PKR Traders",
+    "pkr traders pudukkottai",
+    "pkkr dairy equipment",
+    // Core product
     "dairy equipment",
+    "dairy plant erection",
     "milk processing plant",
+    "milk processing machinery",
     "ghee boiler",
     "milk chilling tank",
-    "dairy plant erection",
+    "milk storage tank",
     "paneer making machine",
-    "steam boiler dairy",
-    "SMP culture supply",
-    "dairy machinery Pudukkottai",
-    "PKR Traders",
-    "PKKR Engineering",
-    "Tamil Nadu dairy equipment",
+    "curd making vat",
+    "industrial steam boiler",
+    "stainless steel silos",
+    "dairy crates",
+    // Lab / consumables
+    "dairy lab materials",
+    "SMP powder",
+    "SMP culture",
+    "starter culture dairy",
+    "skim milk powder supplier",
+    // Geographic
+    "dairy equipment Pudukkottai",
+    "dairy machinery Tamil Nadu",
+    "dairy plant erection Tamil Nadu",
+    "dairy equipment South India",
+    "milk plant supplier Pudukkottai",
+    // Long-tail
+    "turnkey dairy plant",
+    "used dairy machinery",
+    "second hand dairy equipment",
+    "dairy plant commissioning",
+    "bulk milk cooling unit",
+    "1000 LPH dairy plant",
+    "5000 LPH milk processing",
   ],
-  authors: [{ name: "PKKR Engineering & PKR Traders" }],
+
+  // ── Authors / Publisher ────────────────────────────────────────────────────
+  authors: [{ name: "PKKR Engineering & PKR Traders", url: BASE_URL }],
   creator: "PKKR Engineering",
   publisher: "PKKR Engineering & PKR Traders",
+
+  // ── Canonical & Alternates ────────────────────────────────────────────────
+  // Tells Google that https://pkkrengineering.com is the one true URL.
+  alternates: {
+    canonical: BASE_URL,
+  },
+
+  // ── Open Graph ───────────────────────────────────────────────────────────
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://pkkrengineering.com",
+    url: BASE_URL,
     siteName: "PKKR Engineering & PKR Traders",
-    title: "PKKR Engineering & PKR Traders — Dairy Equipment & Plant Erection, Pudukkottai",
+    title:
+      "PKKR Engineering & PKR Traders – Dairy Equipment & Plant Erection, Pudukkottai",
     description:
-      "Complete dairy equipment supply, dairy plant erection, milk processing machinery and lab materials. Based in Pudukkottai, Tamil Nadu.",
+      "Complete dairy equipment supply, dairy plant erection, milk processing machinery, ghee boilers, lab materials & SMP culture. Based in Pudukkottai, Tamil Nadu.",
     images: [
       {
         url: "/images/stainless-steel-silos.jpg",
         width: 900,
         height: 600,
-        alt: "Stainless steel dairy processing silos and tanks — PKKR Engineering",
+        alt: "Stainless steel dairy processing silos and tanks – PKKR Engineering, Pudukkottai",
       },
     ],
   },
+
+  // ── Twitter / X Card ─────────────────────────────────────────────────────
   twitter: {
     card: "summary_large_image",
-    title: "PKKR Engineering & PKR Traders — Dairy Equipment Pudukkottai",
-    description: "Dairy equipment supply, plant erection, lab materials & SMP culture. Pudukkottai, Tamil Nadu.",
+    title: "PKKR Engineering & PKR Traders – Dairy Equipment, Pudukkottai",
+    description:
+      "Dairy equipment supply, plant erection, lab materials & SMP culture. Pudukkottai, Tamil Nadu.",
     images: ["/images/stainless-steel-silos.jpg"],
   },
+
+  // ── Robots ───────────────────────────────────────────────────────────────
   robots: {
     index: true,
     follow: true,
@@ -65,14 +123,117 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
+
+  // ── Verification placeholders (fill in once you own the domain) ───────────
+  // verification: {
+  //   google: "YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN",
+  //   yandex: "YOUR_YANDEX_TOKEN",
+  // },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#7c1220",
+};
+
+// ── JSON-LD Structured Data ───────────────────────────────────────────────────
+// LocalBusiness schema helps Google show your business in local search / Maps.
+// WebSite schema with SearchAction enables Google's sitelinks searchbox.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": `${BASE_URL}/#business`,
+      name: "PKKR Engineering & PKR Traders",
+      alternateName: ["PKKR Engineering", "PKR Traders", "pkkrengineering"],
+      description:
+        "Complete dairy equipment supply, dairy plant erection, milk processing machinery, ghee boilers, milk storage tanks, lab materials, SMP powder & culture, and new & used dairy machinery in Pudukkottai, Tamil Nadu.",
+      url: BASE_URL,
+      telephone: "+916382644316",
+      email: "pkkrengineering@gmail.com",
+      foundingDate: "2005",
+      image: `${BASE_URL}/images/stainless-steel-silos.jpg`,
+      logo: `${BASE_URL}/images/stainless-steel-silos.jpg`,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Pudukkottai",
+        addressLocality: "Pudukkottai",
+        addressRegion: "Tamil Nadu",
+        postalCode: "622001",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 10.3797,
+        longitude: 78.8202,
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          opens: "09:00",
+          closes: "19:00",
+        },
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+916382644316",
+        contactType: "customer service",
+        availableLanguage: ["English", "Tamil"],
+        areaServed: ["IN"],
+      },
+      areaServed: [
+        { "@type": "State", name: "Tamil Nadu" },
+        { "@type": "Country", name: "India" },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Dairy Equipment & Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Milk Process Plant" } },
+          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Ghee Boiler" } },
+          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Milk Chilling Tank" } },
+          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Industrial Steam Boiler" } },
+          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Paneer & Curd Making Vat" } },
+          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Stainless Steel Silos" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Dairy Plant Erection" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Dairy Lab Materials & SMP Culture Supply" } },
+        ],
+      },
+      sameAs: [],
+      priceRange: "₹₹",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      url: BASE_URL,
+      name: "PKKR Engineering & PKR Traders",
+      description:
+        "Dairy equipment supplier and plant erector based in Pudukkottai, Tamil Nadu, India.",
+      publisher: { "@id": `${BASE_URL}/#business` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -82,6 +243,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={manrope.variable}>
+      <head>
+        {/* JSON-LD structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={manrope.className}
         style={{
