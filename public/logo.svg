@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 220 220">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fffbe8"/>
+      <stop offset="20%"  stop-color="#f8e27a"/>
+      <stop offset="45%"  stop-color="#d4a830"/>
+      <stop offset="65%"  stop-color="#c9841b"/>
+      <stop offset="85%"  stop-color="#f0c84a"/>
+      <stop offset="100%" stop-color="#7a5010"/>
+    </linearGradient>
+    <filter id="glowFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="topArc" d="M 52,110 A 58,58 0 0 1 168,110"/>
+  </defs>
+  
+  <!-- Hexagon outer border -->
+  <polygon points="110,6 204,55 204,155 110,204 16,155 16,55" 
+    fill="#7c1220" stroke="#c9a24b" stroke-width="3"/>
+  
+  <!-- Inner border -->
+  <polygon points="110,20 190,65 190,145 110,190 30,145 30,65" 
+    fill="none" stroke="#c9a24b" stroke-width="1" opacity="0.4"/>
+  
+  <!-- SINCE 2005 arc top -->
+  <text font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#c9a24b" letter-spacing="3">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">S I N C E   2 0 0 5</textPath>
+  </text>
+  
+  <!-- Top divider -->
+  <line x1="42" y1="84" x2="178" y2="84" stroke="#c9a24b" stroke-width="0.8" opacity="0.45"/>
+  
+  <!-- PKKR text -->
+  <text x="110" y="116" text-anchor="middle" dominant-baseline="auto"
+    font-family="Georgia,'Times New Roman',serif"
+    font-size="44" font-weight="900"
+    fill="url(#goldGrad)" filter="url(#glowFilter)" letter-spacing="5">PKKR</text>
+  
+  <!-- Underline -->
+  <line x1="48" y1="121" x2="172" y2="121" stroke="#c9a24b" stroke-width="1.2" opacity="0.6"/>
+  
+  <!-- Bottom tagline -->
+  <text x="110" y="138" text-anchor="middle"
+    font-family="Arial,sans-serif" font-size="7.5" font-weight="800"
+    fill="#ddb95a" letter-spacing="0.8">ENGINEERING · PKR TRADERS</text>
+</svg>

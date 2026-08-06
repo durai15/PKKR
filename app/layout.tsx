@@ -98,10 +98,10 @@ export const metadata: Metadata = {
       "Complete dairy equipment supply, dairy plant erection, milk processing machinery, ghee boilers, lab materials & SMP culture. Based in Pudukkottai, Tamil Nadu.",
     images: [
       {
-        url: "/images/stainless-steel-silos.jpg",
-        width: 900,
-        height: 600,
-        alt: "Stainless steel dairy processing silos and tanks – PKKR Engineering, Pudukkottai",
+        url: "/og-image.png",
+        width: 800,
+        height: 800,
+        alt: "PKKR Engineering & PKR Traders – Dairy Equipment Specialists, Pudukkottai",
       },
     ],
   },
@@ -112,7 +112,22 @@ export const metadata: Metadata = {
     title: "PKKR Engineering & PKR Traders – Dairy Equipment, Pudukkottai",
     description:
       "Dairy equipment supply, plant erection, lab materials & SMP culture. Pudukkottai, Tamil Nadu.",
-    images: ["/images/stainless-steel-silos.jpg"],
+    images: ["/og-image.png"],
+  },
+
+  // ── Favicon / Icons ──────────────────────────────────────────────────────
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "icon", url: "/android-chrome-192.png", sizes: "192x192", type: "image/png" },
+      { rel: "icon", url: "/android-chrome-512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
 
   // ── Robots ───────────────────────────────────────────────────────────────
