@@ -21,24 +21,24 @@ const ALL_VIDEOS = [
     description: "Time-lapse of dairy equipment installation, pipework, and commissioning process.",
     thumbnail: "/images/milk-chilling-tank.jpg",
   },
-  // {
-  //   src: "/videos/1kl_milk_curd_plant_eration_work_finished.mp4",
-  //   title: "1 KL Milk & Curd Plant – Work Finished",
-  //   description: "Completed erection of a 1,000-litre milk and curd processing plant — full setup and final commissioning walk-through.",
-  //   thumbnail: "/images/paneer-processing-vat.jpg",
-  // },
+  {
+    src: "/videos/1kl_milk_curd_plant_eration_work_finished.mp4",
+    title: "1 KL Milk & Curd Plant – Work Finished",
+    description: "Completed erection of a 1,000-litre milk and curd processing plant — full setup and final commissioning walk-through.",
+    thumbnail: "/images/paneer-processing-vat.jpg",
+  },
   {
     src: "/videos/milk-backing.mp4",
     title: "Milk Backing Process",
     description: "Detailed view of the milk backing process at our dairy plant facility.",
     thumbnail: "/images/milk-agitator-vat.jpg",
   },
-  {
-    src: "/videos/1kl-plant-erection-finished.mp4",
-    title: "1 KL Plant Erection – Completed",
-    description: "Full erection and finishing work of a 1,000-litre dairy plant installation.",
-    thumbnail: "/images/dairy-processing-plant.jpg",
-  },
+  // {
+  //   src: "/videos/1kl-plant-erection-finished.mp4",
+  //   title: "1 KL Plant Erection – Completed",
+  //   description: "Full erection and finishing work of a 1,000-litre dairy plant installation.",
+  //   thumbnail: "/images/dairy-processing-plant.jpg",
+  // },
 ];
 
 function VideoCard({
